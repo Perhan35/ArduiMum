@@ -329,7 +329,7 @@ void busAPI(EthernetClient &busClient){
     }else if(HTTP_req.indexOf(strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[60])))) > 0){ // "updateTime"
       updateServerTime();
     }
-  }else if(HTTP_req.indexOf(strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[58])))) > 0){ // "/admin" - WEB PAGE
+  }else if(HTTP_req.indexOf(strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[57])))) > 0){ // "/admin" - WEB PAGE
     #ifdef DEBUG
       Serial.println("Sending HTML Page");
     #endif
@@ -390,7 +390,7 @@ void selectCondLogo(int& weather_cond){
   }else if(weather_cond == 803 || weather_cond == 804){ //Broken Clouds 
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[9])));
   }else{
-    weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[32])); //"?"
+    weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[32]))); //"?"
   }
 }
 
