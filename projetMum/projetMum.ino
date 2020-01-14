@@ -1,3 +1,12 @@
+/*
+ * File : projetMum
+ * Description : Project's core
+ * Developed by : Perhan Scudeller
+ * E-mail address : perhan.scudeller@gmail.com
+ * Licence : Copyright
+ * Last update : 13.01.2020
+ */
+
 #include "config.h"
 
 //#define DEBUGCOLOR

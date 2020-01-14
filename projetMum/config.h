@@ -1,3 +1,12 @@
+/*
+ * File : config.h
+ * Description : Configuraiton file for the library
+ * Developed by : Perhan Scudeller
+ * E-mail address : perhan.scudeller@gmail.com
+ * Licence : Copyright
+ * Last update : 13.01.2020
+ */
+
 #include <SPI.h>
 #include <Ethernet.h>
 #include <EthernetUdp.h>

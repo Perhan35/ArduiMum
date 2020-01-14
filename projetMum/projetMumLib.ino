@@ -1,3 +1,11 @@
+/*
+ * File : projetMumLib
+ * Description : Project's library
+ * Developed by : Perhan Scudeller
+ * E-mail address : perhan.scudeller@gmail.com
+ * Licence : Copyright
+ * Last update : 13.01.2020
+ */
 
 /*************** TIME ********************/ 
 // Ethernet shield and NTP setup
