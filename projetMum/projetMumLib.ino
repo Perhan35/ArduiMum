@@ -332,7 +332,7 @@ void busAPI(EthernetClient &busClient){
       }
     }else if(HTTP_req.indexOf(strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[59])))) > 0){ // "whatTime"
       busClient.print("{\"jet_lag\" : \"");
-      busClient.print(summerJetLag ? strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[14]))) : strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[15]))));
+      busClient.print(summerJetLag ? strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[14]))) : strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[15])))); //summerTime   //winterTimer
       busClient.println("\" }");
     }else if(HTTP_req.indexOf(strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[60])))) > 0){ // "updateTime"
       updateServerTime();
