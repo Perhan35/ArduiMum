@@ -140,10 +140,10 @@ String msg = "";
 String HTTP_req = "";
 String bus_C3[2];
 String bus_9[2];
-const PROGMEM uint16_t tinyWhite = matrix.Color333(1, 1, 1);
-const PROGMEM uint16_t dark = matrix.Color333(0, 0, 0);
-const PROGMEM uint16_t yellow = matrix.Color333(1, 1, 0);
-const PROGMEM uint16_t clear_yellow = matrix.Color333(4, 4, 0);
+const uint16_t tinyWhite = matrix.Color333(1, 1, 1);
+const uint16_t dark = matrix.Color333(0, 0, 0);
+const uint16_t yellow = matrix.Color333(1, 1, 0);
+const uint16_t clear_yellow = matrix.Color333(4, 4, 0);
 uint16_t msg_color = tinyWhite;
 
 /*** Server Web Page ***/

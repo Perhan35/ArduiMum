@@ -375,27 +375,62 @@ void busAPI(EthernetClient &busClient){
 
 
 void selectCondLogo(int& weather_cond){
-  if(weather_cond >= 200 && weather_cond <= 232){ //Thunderstorm Orage
+  if(weather_cond == 1087
+        || weather_cond == 1273
+        || weather_cond == 1276
+        || weather_cond == 1279
+        || weather_cond == 1282){ //Thunderstorm Orage
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[1])));
-  }else if(weather_cond >= 300 && weather_cond <= 321){ //Drizzle petite pluie
+  }else if(weather_cond == 1063
+        || weather_cond == 1069
+        || weather_cond == 1072
+        || weather_cond == 1150
+        || weather_cond == 1153
+        || weather_cond == 1168
+        || weather_cond == 1171
+        || weather_cond == 1180
+        || weather_cond == 1183
+        || weather_cond == 1186
+        || weather_cond == 1189
+        || weather_cond == 1204
+        || weather_cond == 1240
+        || weather_cond == 1249
+        || weather_cond == 1261){ //Drizzle petite pluie
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[2])));
-  }else if(weather_cond >= 500 && weather_cond <= 504){ //Rain pluie
+  }else if(weather_cond == 1192
+        || weather_cond == 1195
+        || weather_cond == 1198
+        || weather_cond == 1201
+        || weather_cond == 1207
+        || weather_cond == 1243
+        || weather_cond == 1246
+        || weather_cond == 1252
+        || weather_cond == 1264){ //Rain pluie
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[3])));
-  }else if(weather_cond == 511){ //Snow neige
+  }else if(weather_cond == 1066 
+        || weather_cond == 1114 
+        || weather_cond == 1117
+        || weather_cond == 1210
+        || weather_cond == 1213
+        || weather_cond == 1216
+        || weather_cond == 1219
+        || weather_cond == 1222
+        || weather_cond == 1225
+        || weather_cond == 1237
+        || weather_cond == 1255
+        || weather_cond == 1258){ //Snow neige
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[4])));
-  }else if(weather_cond >= 520 && weather_cond <= 531){ //Drizzle petite pluie
-    weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[2])));
-  }else if(weather_cond >= 600 && weather_cond <= 622){ //Snow neige
-    weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[4])));
-  }else if(weather_cond >= 701 && weather_cond <= 781){ //Mist brouillard
+  }else if(weather_cond == 1030 
+        || weather_cond == 1135
+        || weather_cond == 1147){ //Mist brouillard
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[5])));
-  }else if(weather_cond == 800){ //Clear soleil
+  }else if(weather_cond == 1000){ //Clear soleil
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[6])));
-  }else if(weather_cond == 801){ //Few Clouds 
+  }else if(weather_cond == 1003){ //Few Clouds
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[7])));
-  }else if(weather_cond == 802){ //Scattered Clouds 
+  }else if(weather_cond == 1006){ //Scattered Clouds 
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[8])));
-  }else if(weather_cond == 803 || weather_cond == 804){ //Broken Clouds 
+  }else if(weather_cond == 1009){ //Broken Clouds 
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[9])));
   }else{
     weather_cond_txt = strcpy_P(buffer, (char*)pgm_read_word(&(rec_str[32]))); //"?"
@@ -1294,57 +1329,45 @@ void displayBrokenCloudsAO(){
 
 void displayLogoC3() {
   matrix.fillRect(0, 16, 32, 16, dark);
-  uint16_t green = matrix.Color333(0, 4, 0);
-  matrix.fillRect(0, 16, 24, 16, green);
+  uint16_t orange = matrix.Color888(230, 142, 0);
+  matrix.fillRect(0, 16, 24, 16, orange);
   //C
-  matrix.drawChar(1, 17, 'C', dark, matrix.Color333(0, 4, 0), 2);
+  matrix.drawChar(1, 17, 'C', dark, orange, 2);
   //
   matrix.drawPixel(2, 18, dark);
   matrix.drawPixel(3, 19, dark);
   matrix.drawPixel(2, 29, dark);
   matrix.drawPixel(3, 28, dark); 
   matrix.drawPixel(9, 18, dark); 
-  matrix.drawPixel(8, 19, dark); // ?
+  matrix.drawPixel(8, 19, dark);
   matrix.drawPixel(9, 29, dark);
-  matrix.drawPixel(8, 28, dark); // ?
-  //3
-  matrix.drawChar(12, 17, '3', dark, matrix.Color333(0, 4, 0), 2);
+  matrix.drawPixel(8, 28, dark);
+  //5
+  matrix.drawChar(12, 17, '5', dark, orange, 2);
   //
-  matrix.drawPixel(21, 17, green);
-  matrix.drawPixel(12, 17, green);
-  matrix.drawPixel(19, 23, green);
-  matrix.drawPixel(16, 24, green);
-
-  matrix.drawPixel(19, 19, dark);
-  matrix.drawPixel(19, 20, dark);
-  matrix.drawPixel(20, 21, dark);
-  matrix.drawPixel(20, 24, dark);
+  matrix.drawPixel(21, 17, orange);
+  matrix.drawPixel(12, 17, orange);
+  matrix.drawPixel(20, 22, dark);
   matrix.drawPixel(20, 29, dark);
-  matrix.drawPixel(18, 22, dark);
-  matrix.drawPixel(17, 22, dark);
-  matrix.drawPixel(19, 25, dark);
-  matrix.drawPixel(19, 28, dark);
-  matrix.drawPixel(14, 28, dark);
   matrix.drawPixel(13, 29, dark);
 }
 
 void displayLogo9() {
-  matrix.fillRect(0, 16, 32, 16, 0);
-  matrix.fillRect(0, 16, 16, 16, matrix.Color333(0, 0, 4));
-  //9
-  matrix.drawChar(3, 17, '9', dark, matrix.Color333(0, 0, 4), 2); //, matrix.Color333(0, 0, 4)
+  matrix.fillRect(0, 16, 32, 16, dark);
+  uint16_t orange = matrix.Color888(160, 109, 31);
+  matrix.fillRect(0, 16, 24, 16, orange);
+  //1
+  matrix.drawChar(1, 17, '1', dark, orange, 2);
   //
-  matrix.drawPixel(5, 19, dark); // ?
-  matrix.drawPixel(5, 22, dark); // ?
-  matrix.drawPixel(10, 19, dark); // ?
-  matrix.drawPixel(10, 22, dark); // ?
-  matrix.drawPixel(4, 23, dark);
   matrix.drawPixel(4, 18, dark);
-  matrix.drawPixel(11, 18, dark);
-  matrix.drawPixel(10, 26, dark);
-  matrix.drawPixel(11, 27, dark);
-  matrix.drawPixel(8, 28, dark);
-  matrix.drawPixel(9, 29, dark);
+  matrix.drawPixel(2, 20, dark);
+  //4
+  matrix.drawChar(12, 17, '4', dark, orange, 2);
+  //
+  matrix.drawPixel(17, 18, dark);
+  matrix.drawPixel(15, 20, dark);
+  matrix.drawPixel(13, 22, dark);
+  matrix.drawPixel(15, 22, orange);
 }
 
 void displaySmiley(uint8_t x, uint8_t y) {
