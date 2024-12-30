@@ -1,0 +1,10 @@
+1. Install Arduino IDE
+
+2. Install following libraries: 
+- "RGB matrix Panel" by Adafruit
+- "Adafruit GFX Library" by Adafruit
+- "Time" by Michael Margolis
+
+3. Set Board as "Arduino Mega 2560"
+
+4. Connect the board with USB.
