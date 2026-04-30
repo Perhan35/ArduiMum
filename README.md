@@ -17,7 +17,7 @@ ArduiMum is an IoT display system that:
 ## Demo
 
 ### Video
-<video src="pictures/ArduiMum_demo.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted" style="max-width:100%;">
+<video src="https://github.com/Perhan35/ArduiMum/raw/refs/heads/master/pictures/ArduiMum_demo.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted" style="max-width:100%;">
   Your browser does not support HTML5 video.
 </video>
 
