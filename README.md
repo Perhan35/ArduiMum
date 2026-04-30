@@ -2,6 +2,10 @@
 
 An Arduino Mega 2560 project that displays real-time information (bus, time and weather) on a 64x32 RGB LED matrix.
 
+<video src="https://github.com/user-attachments/assets/3b89140a-0723-4620-99fe-7a29e3bc59c3" controls="controls" autoplay="autoplay" loop="loop" muted="muted" style="max-width:100%;">
+  Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+</video>
+
 ## Overview
 
 ArduiMum is an IoT display system that:
@@ -9,6 +13,17 @@ ArduiMum is an IoT display system that:
 - Fetches data from a web API
 - Displays weather, time, and other information on an RGB LED matrix
 - Syncs time using NTP (Network Time Protocol)
+
+## Demo
+
+### Video
+<video src="pictures/ArduiMum_demo.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted" style="max-width:100%;">
+  Your browser does not support HTML5 video.
+</video>
+
+### Photos
+![Temperature Display](pictures/demo_temperature.JPG)
+![Weather Display](pictures/demo_weather.JPG)
 
 ## Hardware
 
